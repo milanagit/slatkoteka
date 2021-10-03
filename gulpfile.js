@@ -24,8 +24,16 @@ function browsersyncServe(cb) {
     browserync.init({
         server: {
             baseDir: '.',
-            index: 'index.php'
-            // proxy: 'http://localhost/devwp'
+            // index: 'index.php',
+            // proxy: 'http://localhost:8080'
+            // proxy: 'http://myproject.dev/',
+            // host: 'myproject.dev',
+            // open: 'external'
+
+            // open: 'external',
+            // host: 'localhost',
+            // proxy: 'localhost/slatkoteka', // or project.dev/app/
+            // port: 3000
         }
     });
     cb();
@@ -50,3 +58,32 @@ exports.default = series(
     watchTask
 );
 
+
+
+
+
+// var gulp = require('gulp');
+// var browserSync = require('browser-sync').create();
+// var sass = require('gulp-sass')(require('sass'));
+
+// gulp.task('serve', function() {
+
+//     browserSync.init({
+//         server: '.'
+//     });
+
+//     gulp.watch('assets/scss/**/*.scss', gulp.series('sass'));
+//     gulp.watch('*php').on('change', browserSync.reload);
+
+// });
+
+// gulp.task('sass', function() {
+
+//     return gulp.src('assets/scss/**/*.scss')
+//         .pipe(sass())
+//         .pipe(gulp.dest('assets/css'))
+//         .pipe(browserSync.stream());
+
+// });
+
+// gulp.task('start', gulp.series('serve', 'sass'));
