@@ -16,7 +16,7 @@ function load_stylesheets()
     wp_enqueue_style('style');
 
     // loading own scss styles
-    wp_register_style('stylesscss', get_template_directory_uri() . '/assets/css/styles.css', array(), false, 'all');
+    wp_register_style('stylesscss', get_template_directory_uri() . '/assets/css/style.css', array(), false, 'all');
     wp_enqueue_style('stylesscss');
 }
 
