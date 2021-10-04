@@ -2,6 +2,7 @@
 $light-pink: #ffebf2;
 $dark-pink: #f650a0;
 $linkColor: #000;
+$ligth-blue-gray-two: #bec8e2;
 
 // Breakpoints
 $xlargeup: 1200px;
@@ -26,6 +27,10 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -37,13 +42,50 @@ button, h1, h2, h3, h4, h5, h6, ol, p, span, ul {
     line-height: 1.4;
 }
 
+dl, h1, h2, h3, h4, h5, h6, ol, p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    --min-font-px: 35px;
+    --min-font: 35;
+    --max-font: 55;
+    color: #000;
+}
+
+h2, h3 {
+    color: #000;
+    font-family: secular,sans-serif;
+}
+
 p, span {
     --min-font-px: 13px;
     --min-font: 13;
     --max-font: 16;
 }
 
-// HEADER
+.st-container {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (min-width: $smallerup) {
+        max-width: 540px;
+    }
+    @media screen and (min-width: $smallup) {
+        max-width: 720px;
+    }
+    @media screen and (min-width: $largeup) {
+        max-width: 960px;
+    }
+    @media screen and (min-width: $xlargeup) {
+        max-width: 1156px;
+    }
+}
+
+/********* HEADER *********/
 header {
     background-color: $light-pink;
     position: sticky;
@@ -51,23 +93,6 @@ header {
     z-index: 1022;
 
     .st-container {
-        width: 100%;
-        padding-right: 8px;
-        padding-left: 8px;
-        margin-right: auto;
-        margin-left: auto;
-        @media screen and (min-width: $smallerup) {
-            max-width: 540px;
-        }
-        @media screen and (min-width: $smallup) {
-            max-width: 720px;
-        }
-        @media screen and (min-width: $largeup) {
-            max-width: 960px;
-        }
-        @media screen and (min-width: $xlargeup) {
-            max-width: 1156px;
-        }
         .st-navbar {
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
@@ -80,6 +105,10 @@ header {
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
             justify-content: space-between;
+            @media screen and (max-width: 575px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
             @media screen and (max-width: $largedown) {
                 padding: 15px 0;
             }
@@ -148,7 +177,7 @@ header {
                 font-size: 10px;
                 color: #f650a0;
                 display: block;
-                font-family: varela, sans-serif;            
+                font-family: 'Varela Round', sans-serif;         
                 font-weight: bold;
             }
 
@@ -307,4 +336,112 @@ header {
         }
 
     }
+}
+
+/********* MAIN CONTENT *********/
+main {
+    // LOCATIONS
+    .st-locations {
+        &:before {
+            content: '';
+            background-image: url("../images/path-9-copy-2.png");
+            background-repeat: no-repeat;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+        // Page header
+        .st-page-header {
+            padding-top: 80px;
+            h1 {
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+                margin-bottom: 4px;
+            }
+            p {
+                max-width: 768px;
+                font-family: 'Varela Round', sans-serif;
+                color: #000;
+            }
+        }
+
+        // Breadcrumbs
+        .st-breadcrumbs {
+            margin-top: 40px;
+            span {
+                color: $ligth-blue-gray-two;
+                font-size: 12px;
+                font-family: 'Varela Round', sans-serif;
+                a {
+                    color: $ligth-blue-gray-two;
+                }
+                .st-breadcrumb-last {
+                    color: #000;
+                }
+            }
+        }
+
+        // Locations
+        .st-locations {
+            font-family: 'Varela Round', sans-serif; 
+            margin-top: 40px;
+            .st-location-item {
+                .st-location-info {
+                    -webkit-box-shadow: 0 1px 9px 0 rgb(0 35 64 / 20%);
+                    box-shadow: 0 1px 9px 0 rgb(0 35 64 / 20%);
+                    background-color: #fff;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    margin-bottom: 45px;
+                    width: 100%;
+                    -webkit-box-flex: 0;
+                    -ms-flex: 0 0 550px;
+                    flex: 0 0 550px;
+                    padding: 35px 42px;
+
+                    h2 {
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #e7e7e7;
+                        margin-bottom: 16px;
+                        font-family: secular,sans-serif;
+                        --min-font-px: 18px;
+                        --min-font: 18;
+                        --max-font: 22;
+                        -webkit-box-flex: 0;
+                        -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        img {
+
+                        }
+                    }
+
+                    .st-info {
+                        ul.st-contact-info {
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    // SOON SECTION
+
+    // FRANCHISE
+
+    // GALLERY
 }
