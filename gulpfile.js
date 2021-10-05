@@ -59,31 +59,3 @@ exports.default = series(
 );
 
 
-
-
-
-// var gulp = require('gulp');
-// var browserSync = require('browser-sync').create();
-// var sass = require('gulp-sass')(require('sass'));
-
-// gulp.task('serve', function() {
-
-//     browserSync.init({
-//         server: '.'
-//     });
-
-//     gulp.watch('assets/scss/**/*.scss', gulp.series('sass'));
-//     gulp.watch('*php').on('change', browserSync.reload);
-
-// });
-
-// gulp.task('sass', function() {
-
-//     return gulp.src('assets/scss/**/*.scss')
-//         .pipe(sass())
-//         .pipe(gulp.dest('assets/css'))
-//         .pipe(browserSync.stream());
-
-// });
-
-// gulp.task('start', gulp.series('serve', 'sass'));

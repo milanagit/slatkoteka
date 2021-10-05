@@ -183,44 +183,138 @@
         </div>
 
         <!-- SOON SECTION -->
-        <div class="container new-local">
+        <div class="st-container st-new-local">
             <div class="row">
-                <div class="col-md-4 left-image">
-                    <picture>
-                        <img src="" data-srcset="https://slatkoteka.rs/wp-content/uploads/2020/11/zid.jpg" alt="">
-                    </picture>
+                <div class="d-none d-lg-flex col-md-4 st-left-image">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/screenshot-2020-10-12-at-05-24-10.png" alt="">
                 </div>
                 
-                <div class="col-md-3 right-image">
-                    <picture>
-                        <img src="" data-srcset="https://slatkoteka.rs/wp-content/uploads/2020/11/screenshot-2020-10-08-at-20-47-47.jpg" alt="">
-                    </picture>
+                <div class="d-none d-lg-flex col-md-3 st-right-image">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/screenshot-2020-10-08-at-20-47-47.png" alt="">
                 </div>
                 
-                <div class="col-lg-4 offset-lg-1 col-md-6 offset-md-3 text-column">
-                    <span class="title">USKORO: SLATKOTEKA NOVI BEOGRAD</span>
+                <div class="col-lg-4 offset-lg-1 col-md-6 offset-md-3 st-text-column">
+                    <span class="st-title">USKORO: SLATKOTEKA NOVI BEOGRAD</span>
                 </div>
             </div>
         </div>
 
         <!-- FRANCHISE -->
-        <div class="franchise">
+        <div class="st-franchise">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
                         <h2>NEDOSTAJE SLATKOTEKA U VAŠEM GRADU?</h2>
-                        <p>Želite da pokrenete sopstveni posao? <a href="/fransiza/">Saznajte više o Slatkoteka franšizi i prijavite se ovde</a>.</p>
+                        <p>Saznajte više o Slatkoteka franšizi <a href="<?php echo home_url();?>">ovde</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- GALLERY -->
-        <div class="container">
-        </div>
-    </main>
+        <div class="container-fluid st-gallery-grid">
+            <div class="st-row">
+                <div class="st-col st-col-out">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-I-1.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-I-2.png" alt="">
+                </div>
+                <div class="st-col st-col-inner">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-I-3.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-I-4.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-I-5.png" alt="">
+                </div>
 
-    
-    <!-- REFERENCES -->
+                <div class="st-col st-col-middle">
+                    <div class="st-row">
+                        <div class="st-col st-lg-up">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-II-1.png" alt="">
+                        </div>
+                        <div class="st-col st-sm-up">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-II-2.png" alt="">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-II-3.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="st-row">
+                        <div class="st-col st-sm-down">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-II-4.png" alt="">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-II-5.png" alt="">
+                        </div>
+                        <div class="st-col st-lg-down">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-II-6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="st-col st-col-inner">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-III-1.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-III-2.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-III-3.png" alt="">
+                </div>
+                <div class="st-col st-col-out st-no-pd-right">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-III-4.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/gallery-III-5.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="st-pre-footer">
+            <div class="container">
+
+                <div class="st-gallery-row row">
+
+                    <!-- Awords -->
+                    <div class="st-awards st-gallery-column col-12 col-xl-3">
+                        <h2>NAGRADE</h2>
+                        
+                        <ul>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/awords-1.png" alt=""></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/awords-2.png" alt=""></li>
+                        </ul>
+                    </div>
+                                                    
+                    <!-- Supported -->
+                    <div class="st-supported st-gallery-column col-12 col-xl-9">
+                        <h2>PODRŽALI SMO</h2>
+
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="st-gallery-row row">
+                    <!-- References -->
+                    <div class="st-references st-gallery-column col-12 col-xl-7">
+                        <h2>REFERENCE NA KOJE SMO POSEBNO PONOSNI</h2>
+
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                                                    
+                    <!-- Catering -->
+                    <div class="st-catering st-gallery-column col-12 col-xl-5">
+                        <h2>KETERING</h2>
+
+                        <p>Želite da poručite neke od Slatkoteka proizvoda za vašu proslavu?</p>
+                        <a href="<?php echo home_url();?>">KETERING</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
 <?php get_footer();?>
